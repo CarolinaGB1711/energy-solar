@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!--<html lang="es">-->
+
 <head><!--inicializamos coneccion a hoja de estilos y a bootstrap para la plantillas usadas -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +11,13 @@
     <link rel="shortcut icon" href="./imagenes/energia_solar.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!--lines necesarias para footer-->
-    <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    
-    
+    <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+
 </head>
+
 <body>
     <!--Navegardor  de pagina web -->
     <!-- Navbar -->
@@ -27,7 +31,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#about">Energia Solar</a></li>
                     <li class="nav-item"><a class="nav-link" href="#calculator">Calculadora</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Casos de Éxito</a></li>                    
+                    <li class="nav-item"><a class="nav-link" href="#projects">Casos de Éxito</a></li>
                     <li class="nav-item"><a class="nav-link" href="#videos"> Indaguemos </a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
                 </ul>
@@ -71,52 +75,56 @@
             </button>
         </div>
     </header>
-    
+
 
     <!-- Sección: por que migrar a energia solar -->
 
     <section id="about" class="container my-5">
         <h2 class="text-center">¿Porque Migrar a Energia Solar?</h2>
-        <p class="text-center"text-align: justify>Somos una empresa comprometida con la innovación en energía solar, ayudando a hogares y negocios a reducir costos y mejorar la sostenibilidad.
+        <p class="text-center" text-align: justify>Somos una empresa comprometida con la innovación en energía solar,
+            ayudando a hogares y negocios a reducir costos y mejorar la sostenibilidad.
             dfmkdklkddbgbmkkgkbgfmbgfmbkfmgkmkbgmklmfkbdmggmkjgfjgsdmksdlsdfkñdfmkldfkkvmkm dfkvmsdfkmkdbvfm
             dfjksdfjhdfjhfjgfjdfjkhgjhdfjhdfjhjghjkhkjkhjhfdjkhjhkdfgjghjdf
         </p>
     </section>
 
     <!-- Sección: Calculadora -->
-<section id="calculator" class="container my-5">
+    <section id="calculator" class="container my-5">
         <h2 class="text-center">Calcula Numero de Celdas Solares Necesarias para cubrir tu Consumo</h2>
         <div class="row justify-content-center">
             <div class="col-md-5">
-                     <!-- Entradas para el consumo de energía mensual -->
-    <input type="number" class="form-control type" id="mes1" placeholder="Consumo mes 1 (kWh)">
-    <input type="number" class="form-control type" id="mes2" placeholder="Consumo mes 2 (kWh)">
-    <input type="number" class="form-control type" id="mes3" placeholder="Consumo mes 3 (kWh)">
-    <input type="number" class="form-control type" id="mes4" placeholder="Consumo mes 4 (kWh)">
-    <input type="number" class="form-control type" id="mes5" placeholder="Consumo mes 5 (kWh)">
-    
-    <select id="tipoCelda">
-        <option value="Monocristalina - 20%">Monocristalina - 20%</option>
-        <option value="Policristalina - 15%">Policristalina - 15%</option>
-        <option value="Arseniuro de  Galio - 30%">Arseniuro de Galio - 30%</option>
-        <option value="De película delgada - 10%">De película delgada - 10%</option>
-    </select>
-    
-    <button onclick="calcularCeldasSolares()">Calcular</button>
+                <!-- Entradas para el consumo de energía mensual -->
+                <input type="number" class="form-control type" id="mes1" placeholder="Consumo mes 1 (kWh)">
+                <input type="number" class="form-control type" id="mes2" placeholder="Consumo mes 2 (kWh)">
+                <input type="number" class="form-control type" id="mes3" placeholder="Consumo mes 3 (kWh)">
+                <input type="number" class="form-control type" id="mes4" placeholder="Consumo mes 4 (kWh)">
+                <input type="number" class="form-control type" id="mes5" placeholder="Consumo mes 5 (kWh)">
 
-    <div id="resultado1"></div>
-    <div id="resultado2"></div>
-    <div id="resultado3"></div>
-    <div id="resultado4"></div>
-    <div id="resultado5"></div>
+                <select id="tipoCelda">
+                    <option value="Monocristalina - 20%">Monocristalina - 20%</option>
+                    <option value="Policristalina - 15%">Policristalina - 15%</option>
+                    <option value="Arseniuro de  Galio - 30%">Arseniuro de Galio - 30%</option>
+                    <option value="De película delgada - 10%">De película delgada - 10%</option>
+                </select>
 
-    <canvas id="energyChart" width="400" height="200"></canvas>
-    <canvas id="energyChart1" width="400" height="200"></canvas>
+                <button onclick="calcularCeldasSolares()">Calcular</button>
+
+                <div id="resultado1"></div>
+                <div id="resultado2"></div>
+                <div id="resultado3"></div>
+                <div id="resultado4"></div>
+                <div id="resultado5"></div>
+
+
             </div>
         </div>
-</section>
-         
-        
+    </section>
+    <section class="col-md-6" style="display: flex">
+        <canvas id="energyChart" width="400" height="200"></canvas>
+        <canvas id="energyChart1" width="400" height="200"></canvas>
+    </section>
+
+
     <!-- Sección: Casos de Éxito -->
 
     <section id="projects" class="container my-5">
@@ -124,10 +132,12 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
-                    <img padding: 10px 10px 10px src="./imagenes/metro3.jpg" href="../energy-solar/pagina1.html" target="_blank" class="card-img-top" alt="Proyecto 1">
+                    <img padding: 10px 10px 10px src="./imagenes/metro3.jpg" href="../energy-solar/pagina1.html"
+                        target="_blank" class="card-img-top" alt="Proyecto 1">
                     <div class="card-body">
                         <h5 href="./pagina1.html" class="text-center" color: #007BFF>Metro de Medellín</h5>
-                         <p class="card-text" text-align: justify-all>El metro le sigue apostando al uso de energías verdes y limpias para la movilidad
+                        <p class="card-text" text-align: justify-all>El metro le sigue apostando al uso de energías
+                            verdes y limpias para la movilidad
                             de todos los habitantes del área metropolitana del valle de aburra.</p>
                         <li class="nav-item"><a class="nav-link" href="./pagina1.html">Ver mas</a></li>
 
@@ -135,64 +145,72 @@
                 </div>
             </div>
             <!-- Más casos aquí -->
-            
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="./imagenes/molinos1.jpg" class="card-img-top" alt="Proyecto 1">
-                        <div class="card-body">
-                            <h5 class="text-center">Centro Comercial Los Molinos</h5>
-                            <p class="card-text" text-align: justify-all>Se convierte en el centro comercial con mayor generación de 
-                                energía fotovoltaica de Medellín y El Valle de Aburrá con 1456 paneles solares.
-                            </p>
-                            <li class="nav-item"><a class="nav-link" href="./pagina2.html">Ver mas</a></li>
-       
-                        </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./imagenes/molinos1.jpg" class="card-img-top" alt="Proyecto 1">
+                    <div class="card-body">
+                        <h5 class="text-center">Centro Comercial Los Molinos</h5>
+                        <p class="card-text" text-align: justify-all>Se convierte en el centro comercial con mayor
+                            generación de
+                            energía fotovoltaica de Medellín y El Valle de Aburrá con 1456 paneles solares.
+                        </p>
+                        <li class="nav-item"><a class="nav-link" href="./pagina2.html">Ver mas</a></li>
+
                     </div>
                 </div>
-        
-        <!-- Más casos aquí -->
-         
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="./imagenes/sabaneta.jpg" class="card-img-top" alt="Proyecto 1">
-                        <div class="card-body">
-                            <h5 class="text-center">Entretenimiento: Parque acuático y de los 4 elementos </h5>
-                            <p class="card-text" text-align: justify-all>Aplicaciones de los paneles solares distinto al hogar o transporte. Mira que divertido y ecológico 
-                                puede ser usar una energía limpia para nuestro entretenimiento.
-                            </p>
-                            <li class="nav-item"><a class="nav-link" href="./pagina3.html"text:#007BFF>Ver mas</a></li>
-                        </div>
+            </div>
+
+            <!-- Más casos aquí -->
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./imagenes/sabaneta.jpg" class="card-img-top" alt="Proyecto 1">
+                    <div class="card-body">
+                        <h5 class="text-center">Entretenimiento: Parque acuático y de los 4 elementos </h5>
+                        <p class="card-text" text-align: justify-all>Aplicaciones de los paneles solares distinto al
+                            hogar o transporte. Mira que divertido y ecológico
+                            puede ser usar una energía limpia para nuestro entretenimiento.
+                        </p>
+                        <li class="nav-item"><a class="nav-link" href="./pagina3.html" text:#007BFF>Ver mas</a></li>
                     </div>
                 </div>
+            </div>
         </div>
     </section>
 
-<!--videos de youtube -->
+    <!--videos de youtube -->
 
- <section id="videos" class="container my-5">
-    <h2 class="text-center">Indaguemos sobre el tema</h2>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card">                
-                <iframe width="650" height="315" src="https://www.youtube.com/embed/5cVpl1WGmJA?si=t_f24bOtNIf_zpz2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </div>
-            
- <!-- Más videos aquí -->
-
-             <div class="col-md-6">
+    <section id="videos" class="container my-5">
+        <h2 class="text-center">Indaguemos sobre el tema</h2>
+        <div class="row">
+            <div class="col-md-6">
                 <div class="card">
-                    <iframe width="650" height="315" src="https://www.youtube.com/embed/lbEHW6E0_wA?si=6iV2SWkplMRtuMhu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="650" height="315" src="https://www.youtube.com/embed/5cVpl1WGmJA?si=t_f24bOtNIf_zpz2"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
-                    
-    </div>
-  
- </section>  
+
+            <!-- Más videos aquí -->
+
+            <div class="col-md-6">
+                <div class="card">
+                    <iframe width="650" height="315" src="https://www.youtube.com/embed/lbEHW6E0_wA?si=6iV2SWkplMRtuMhu"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
 
     <!-- Sección: Contacto -->
     <!-- la sexion ontactenos la dejamos oculta por el momento mientras se efectua la conexion con bases de datos para gaudar casos de uso -->
-  
+
     <section id="contact" class="container my-5">
         <h2 class="text-center">Contáctanos</h2>
         <p class="text-center">Déjanos tu consulta y te responderemos pronto.</p>
@@ -203,30 +221,35 @@
             <button type="submit" class="btn btn-primary w-100">Enviar</button>
         </form>
     </section>
-   
-    
-
-<!--creamos el fotter-->
 
 
-  <footer style="background-color: #007BFF; color: white; text-align: center; padding: 20px;">
-    <p>&copy; 2025 Energía Solar. Todos los derechos reservados.</p>
-    <nav>
-        <ul style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 20px;">
-            <li><a href="#" style="color: white; text-decoration: none;">Inicio</a></li>
-            <li><a href="./CALCULADORA.HTML" style="color: white; text-decoration: none;">Acerca de Nosotros</a></li>
-            <li><a href="#contact" style="color: white; text-decoration: none;">Contacto</a></li>
-        </ul>
-    </nav>
-    <div style="margin-top: 10px;">
-        <a href="https://facebook.com" target="_blank" style="background-color: white; color: #007BFF; padding: 10px 15px; border-radius: 5px; text-decoration: none; margin: 5px;">Facebook</a>
-        <a href="https://instagram.com" target="_blank" style="background-color: white; color: #007BFF; padding: 10px 15px; border-radius: 5px; text-decoration: none; margin: 5px;">Instagram</a>
-        <a href="https://twitter.com" target="_blank" style="background-color: white; color: #007BFF; padding: 10px 15px; border-radius: 5px; text-decoration: none; margin: 5px;">Twitter</a>
-    </div>
-</footer>
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!--creamos el fotter-->
+
+
+    <footer style="background-color: #007BFF; color: white; text-align: center; padding: 20px;">
+        <p>&copy; 2025 Energía Solar. Todos los derechos reservados.</p>
+        <nav>
+            <ul style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 20px;">
+                <li><a href="#" style="color: white; text-decoration: none;">Inicio</a></li>
+                <li><a href="./CALCULADORA.HTML" style="color: white; text-decoration: none;">Acerca de Nosotros</a>
+                </li>
+                <li><a href="#contact" style="color: white; text-decoration: none;">Contacto</a></li>
+            </ul>
+        </nav>
+        <div style="margin-top: 10px;">
+            <a href="https://facebook.com" target="_blank"
+                style="background-color: white; color: #007BFF; padding: 10px 15px; border-radius: 5px; text-decoration: none; margin: 5px;">Facebook</a>
+            <a href="https://instagram.com" target="_blank"
+                style="background-color: white; color: #007BFF; padding: 10px 15px; border-radius: 5px; text-decoration: none; margin: 5px;">Instagram</a>
+            <a href="https://twitter.com" target="_blank"
+                style="background-color: white; color: #007BFF; padding: 10px 15px; border-radius: 5px; text-decoration: none; margin: 5px;">Twitter</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/script.js"></script>
 
 </body>
+
 </html>
