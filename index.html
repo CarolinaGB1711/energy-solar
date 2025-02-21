@@ -102,11 +102,11 @@
         <div class="row justify-content-center">
             <div class="col-md-5">
                 <!-- Entradas para el consumo de energía mensual -->
-                <input type="number" class="form-control type" id="mes1" placeholder="Consumo mes 1 (kWh)">
-                <input type="number" class="form-control type" id="mes2" placeholder="Consumo mes 2 (kWh)">
-                <input type="number" class="form-control type" id="mes3" placeholder="Consumo mes 3 (kWh)">
-                <input type="number" class="form-control type" id="mes4" placeholder="Consumo mes 4 (kWh)">
-                <input type="number" class="form-control type" id="mes5" placeholder="Consumo mes 5 (kWh)">
+                <input type="number" class="form-control type" id="mes1" placeholder="Consumo mes 1 (kWh)" required>
+                <input type="number" class="form-control type" id="mes2" placeholder="Consumo mes 2 (kWh)" required>
+                <input type="number" class="form-control type" id="mes3" placeholder="Consumo mes 3 (kWh)" required>
+                <input type="number" class="form-control type" id="mes4" placeholder="Consumo mes 4 (kWh)" required>
+                <input type="number" class="form-control type" id="mes5" placeholder="Consumo mes 5 (kWh)" required>
 
                 <select id="tipoCelda">
                     <option value="Monocristalina - 20%">Monocristalina - 20%</option>
@@ -119,7 +119,7 @@
 
                 <div id="resultado1"></div>
                 <div id="resultado2"></div>
-                <div id="resultado3"></div>
+                <div id="resultado3"></div> 
                 <div id="resultado4"></div>
                 <div id="resultado5"></div>
 
@@ -127,9 +127,22 @@
             </div>
         </div>
     </section>
-    <section class="col-md-6" style="display: flex">
-        <canvas id="energyChart" width="400" height="200"></canvas>
-        <canvas id="energyChart1" width="400" height="200"></canvas>
+
+
+
+    <section> 
+             
+          <div class="container">  
+            <div class="row"> 
+            <div class="col-6">
+               <canvas id="energyChart" width="400" height="200"></canvas>
+         </div> 
+            <div class="col-6">
+             <canvas id="energyChart1" width="400" height="200"></canvas>
+            </div>
+           </div>
+          </div>     
+    
     </section>
 
 
