@@ -101,3 +101,13 @@ function calcularCeldasSolares() {
         const ctx1 = document.getElementById('energyChart1').getContext('2d');
         new Chart(ctx1, config1);
 }
+
+
+    document.getElementById("miFormulario").addEventListener("submit", function(event) {
+        let input = document.getElementById("numero").value;
+        
+        if (!/^\d+$/.test(input)) { // Solo permite números enteros positivos
+            alert("Por favor, ingrese un número válido.");
+            event.preventDefault(); // Evita que se envíe el formulario
+        }
+    });
