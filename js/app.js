@@ -50,7 +50,7 @@ function img4(){
  
  
  function testAbout() {
-  alert("¡Has hecho clic en el enlace de contacto!");
+  alert("Para más información sobre el proyecto contactase con:\n*Eidy Garces Vega\n Correo:garces.veg@gmail.com\n*Leidy Carolina Giraldo Barrera\n Correo:carolina.giraldo18@udea.edu.co\n*Luis Fernando Cardona Ruiz\n Correo:lfernandocruiz@gmail.com\n\nEstamos para servirles");
   // Añadir un evento de clic al enlace
 }
 
