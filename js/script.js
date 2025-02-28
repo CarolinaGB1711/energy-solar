@@ -6,6 +6,14 @@ function calcularCeldasSolares() {
     var consumoMes5 = parseFloat(document.getElementById("mes5").value);
     var tipoCelda = document.getElementById("tipoCelda").value;
 
+    //VALIDAR QUE TODOS LOS CAMPOS NECESARIOS TENGA VALORES
+    if(isNaN(consumoMes1) || isNaN(consumoMes2) || isNaN(consumoMes3) || isNaN(consumoMes4) || isNaN(consumoMes5)||!tipoCelda){
+        alert("por favor complete todos los campos requeridos");
+        return;
+    }
+
+
+
     // Calcular consumo promedio mensual y diario
     var consumoPromedioMensual = (consumoMes1 + consumoMes2 + consumoMes3 + consumoMes4 + consumoMes5) / 5;
     var consumoDiario = consumoPromedioMensual / 30;
@@ -13,16 +21,21 @@ function calcularCeldasSolares() {
     var eficienciaPanel;
 
     // Definir eficiencia según el tipo de celda
-    if (tipoCelda === "Monocristalina - 20%") {
-        eficienciaPanel = 0.20; // 20% de eficiencia
-    } else if (tipoCelda === "Policristalina - 15%") {
-        eficienciaPanel = 0.15; // 15% de eficiencia
-    } else if (tipoCelda === "Arseniuro de  Galio - 30%") {
-        eficienciaPanel = 0.30; // 30% de eficiencia
-    } else if (tipoCelda === "De película delgada - 10%") {
-        eficienciaPanel = 0.10; // 10% de eficiencia
-    } else {
-        eficienciaPanel = 0.15; // Valor por defecto
+    switch (tipoCelda) {
+        case "Monocristalina - 20%":
+            eficienciaPanel = 0.20; // 20% de eficiencia
+            break;
+        case "Policristalina - 15%":
+            eficienciaPanel = 0.15; // 15% de eficiencia
+            break;
+        case "Arseniuro de Galio - 30%":
+            eficienciaPanel = 0.30; // 30% de eficiencia
+            break;
+        case "De película delgada - 10%":
+            eficienciaPanel = 0.10; // 10% de eficiencia
+            break;
+        default:
+            eficienciaPanel = 0.15; // Valor por defecto
     }
 
     // Calcular la cantidad de celdas solares necesarias
@@ -103,11 +116,5 @@ function calcularCeldasSolares() {
 }
 
 
-    document.getElementById("miFormulario").addEventListener("submit", function(event) {
-        let input = document.getElementById("numero").value;
-        
-        if (!/^\d+$/.test(input)) { // Solo permite números enteros positivos
-            alert("Por favor, ingrese un número válido.");
-            event.preventDefault(); // Evita que se envíe el formulario
-        }
-    });
+
+    
