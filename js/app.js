@@ -45,3 +45,12 @@ function img4(){
         draggable: true
       });
   }
+
+ // Obtener el enlace por su ID
+ 
+ 
+ function testAbout() {
+  alert("¡Has hecho clic en el enlace de contacto!");
+  // Añadir un evento de clic al enlace
+}
+
